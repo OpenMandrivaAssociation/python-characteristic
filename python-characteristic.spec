@@ -1,0 +1,44 @@
+%define	oname	characteristic
+
+Name:		python-%{oname}
+Version:	14.3.0
+Release:	1
+Summary:	Python class decorators
+Source0:	http://pypi.python.org/packages/source/c/%{oname}/%{oname}-%{version}.tar.gz
+License:	MIT
+Group:		Development/Python
+Url:		https://github.com/hynek/characteristic/
+BuildArch:	noarch
+BuildRequires:	pythonegg(setuptools)
+
+%description
+``characteristic`` is an `MIT -licensed Python 
+package with class decorators that ease 
+the chores of implementing the most common 
+attribute-related object protocols.
+You just specify the attributes to work with and 
+``characteristic`` gives you:
+- a nice human-readable ``__repr__``,
+- a complete set of comparison methods,
+- and a kwargs-based initializer (that
+cooperates with your existing one)
+*without* writing dull boilerplate code again and again.
+
+
+
+%prep
+%setup -q -n %{oname}-%{version}
+
+%build
+python setup.py build
+
+%install
+python setup.py install --root=%{buildroot}
+
+%files
+%doc AUTHORS.rst
+%doc LICENSE
+%doc README.rst
+%{py_puresitedir}/characteristic.py*
+%{py_puresitedir}/test_characteristic.py*
+%{py_puresitedir}/characteristic*.egg-info
