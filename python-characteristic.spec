@@ -9,7 +9,7 @@ License:	MIT
 Group:		Development/Python
 Url:		https://github.com/hynek/characteristic/
 BuildArch:	noarch
-BuildRequires:	pythonegg(setuptools)
+BuildRequires:	python2-setuptools
 
 %description
 ``characteristic`` is an `MIT -licensed Python 
@@ -39,6 +39,6 @@ python setup.py install --root=%{buildroot}
 %doc AUTHORS.rst
 %doc LICENSE
 %doc README.rst
-%{py_puresitedir}/characteristic.py*
-%{py_puresitedir}/test_characteristic.py*
-%{py_puresitedir}/characteristic*.egg-info
+%{py2_puresitedir}/characteristic.py*
+%{py2_puresitedir}/test_characteristic.py*
+%{py2_puresitedir}/characteristic*.egg-info
