@@ -30,10 +30,10 @@ cooperates with your existing one)
 %setup -q -n %{oname}-%{version}
 
 %build
-python setup.py build
+python2 setup.py build
 
 %install
-python setup.py install --root=%{buildroot}
+python2 setup.py install --root=%{buildroot}
 
 %files
 %doc AUTHORS.rst
