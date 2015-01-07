@@ -1,6 +1,6 @@
 %define	oname	characteristic
 
-Name:		python-%{oname}
+Name:		python2-%{oname}
 Version:	14.3.0
 Release:	1
 Summary:	Python class decorators
