@@ -2,7 +2,7 @@
 
 Name:		python2-%{oname}
 Version:	14.3.0
-Release:	1
+Release:	2
 Summary:	Python class decorators
 Source0:	http://pypi.python.org/packages/source/c/%{oname}/%{oname}-%{version}.tar.gz
 License:	MIT
